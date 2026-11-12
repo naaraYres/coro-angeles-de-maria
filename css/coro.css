@@ -10,8 +10,8 @@
   .hero--statement h1 { max-width: 26ch; }
 }
 
-/* Paquetes: la línea bajo la lista */
-.paquetes__nota {
+/* Servicios: la línea bajo la lista */
+.servicios__nota {
   margin-top: var(--s-6);
   font-size: var(--t-body);
 }
