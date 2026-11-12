@@ -1,0 +1,27 @@
+[
+ {
+  "check": "phone-number",
+  "target": "wa.me/51939942404",
+  "reason": "El cliente dio este número de WhatsApp para recibir cotizaciones; es el canal de venta real."
+ },
+ {
+  "check": "no-visual",
+  "target": "section#paquetes",
+  "reason": "Lista de precios, permitida sin foto (sections.md). El coro aún no tiene fotos; quedan en la lista para el cliente."
+ },
+ {
+  "check": "no-visual",
+  "target": "section#cotizar",
+  "reason": "Formulario de cotización, permitido sin foto (sections.md). Fotos del coro pendientes del cliente."
+ },
+ {
+  "check": "no-visual",
+  "target": "section#preguntas",
+  "reason": "Preguntas frecuentes, permitidas sin foto (sections.md). Fotos del coro pendientes del cliente."
+ },
+ {
+  "check": "copy-headings",
+  "target": "ol.pasos.span-5 > li:nth-of-type(1) > div > h3",
+  "reason": "La lista de sustantivos del verificador es en inglés: los títulos en español sí nombran la cosa (formulario, precio, sonido, reserva) y las preguntas del FAQ pueden ser preguntas."
+ }
+]

@@ -1,0 +1,63 @@
+/* ==========================================================
+   ESTILOS PROPIOS DEL CORO
+   Solo lo que el kit (assets/) no trae. Usa sus tokens:
+   --s-* espacios, --t-* tamaños, --ink, --muted, --line.
+   ========================================================== */
+
+/* Hero: el español usa palabras más largas; el título necesita más ancho
+   para quedarse en 2 líneas en pantallas grandes */
+@media (min-width: 1024px) {
+  .hero--statement h1 { max-width: 26ch; }
+}
+
+/* Paquetes: la línea bajo la lista */
+.paquetes__nota {
+  margin-top: var(--s-6);
+  font-size: var(--t-body);
+}
+
+
+/* Cotizar: los 3 pasos */
+.pasos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--s-7);
+}
+
+.pasos li {
+  display: grid;
+  gap: var(--s-3);
+  justify-items: start;
+}
+
+.pasos h3 {
+  font-size: var(--t-card);
+  margin: 0 0 var(--s-2);
+}
+
+.pasos p {
+  margin: 0;
+  max-width: 44ch;
+}
+
+/* El formulario en dos columnas de campos desde tablet */
+#form-cotizar {
+  display: grid;
+  gap: var(--s-4);
+}
+
+@media (min-width: 640px) {
+  #form-cotizar {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #form-cotizar .field:first-child,
+  #form-cotizar .field--full,
+  #form-cotizar .btn-row,
+  #form-cotizar .form__status,
+  #form-cotizar .form__nota {
+    grid-column: 1 / -1;
+  }
+}
