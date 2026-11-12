@@ -4,6 +4,38 @@
    --s-* espacios, --t-* tamaños, --ink, --muted, --line.
    ========================================================== */
 
+/* ----------------------------------------------------------
+   IDENTIDAD: el dorado del ángel del logo
+   --oro         detalles (marca, bordes, líneas)
+   --oro-texto   textos pequeños en dorado sobre fondo claro (5:1)
+   --oro-claro   dorado sobre el fondo oscuro del pie (7:1)
+   ---------------------------------------------------------- */
+:root {
+  --oro: #b08a3e;
+  --oro-texto: #86631f;
+  --oro-claro: #d4b06a;
+}
+
+/* la marca junto al nombre va en dorado, como el ángel del logo */
+.mark { background: var(--oro); }
+.ground-inverse .mark { background: var(--oro-claro); }
+
+/* etiquetas pequeñas (Trayectoria) en dorado */
+.statement .t-label { color: var(--oro-texto); }
+
+/* números de los pasos: círculo dorado */
+.pasos .step-num { border-color: var(--oro); color: var(--oro-texto); }
+
+/* líneas de las listas (servicios, preguntas) con un toque dorado */
+.rows > li,
+.faq > .faq__item { border-color: color-mix(in oklab, var(--oro) 40%, transparent); }
+
+/* tarjetas de formaciones: filete dorado arriba */
+.formaciones .card { border-top: 2px solid var(--oro); }
+
+/* pie oscuro: títulos de columnas en dorado */
+.footer--dark .footer__col h3 { color: var(--oro-claro); }
+
 /* Hero: el español usa palabras más largas; el título necesita más ancho
    para quedarse en 2 líneas en pantallas grandes */
 @media (min-width: 1024px) {
