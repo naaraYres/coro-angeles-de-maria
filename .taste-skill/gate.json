@@ -31,6 +31,22 @@
    "round": 3,
    "reused": false,
    "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T17:28:06.730Z",
+   "mode": "hook",
+   "host": "claude",
+   "decision": "allow",
+   "reason": "no build is active here",
+   "stopHookActive": false
+  },
+  {
+   "at": "2026-11-12T17:29:33.141Z",
+   "mode": "hook",
+   "host": "claude",
+   "decision": "allow",
+   "reason": "no build is active here",
+   "stopHookActive": false
   }
  ],
  "max": 3,

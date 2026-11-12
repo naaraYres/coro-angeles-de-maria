@@ -64,6 +64,7 @@
     <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Ángeles de María</a>
     <nav class="nav__links" aria-label="Principal">
       <div class="nav__item"><a class="nav__link" href="#paquetes">Paquetes</a></div>
+      <div class="nav__item"><a class="nav__link" href="#instrumentos">Instrumentos</a></div>
       <div class="nav__item"><a class="nav__link" href="#trayectoria">Trayectoria</a></div>
       <div class="nav__item"><a class="nav__link" href="#preguntas">Preguntas</a></div>
     </nav>
@@ -82,7 +83,7 @@
     <div class="wrap"><div class="hero-text hero__in">
       <div>
         <h1 id="hero-h">Coro navideño para empresas y eventos en Lima</h1>
-        <p class="hero__lead">Villancicos en vivo para encendidos de árbol, fiestas de fin de año y celebraciones de su empresa. Coro juvenil con uniforme blanco y dorado, y gorro rojo.</p>
+        <p class="hero__lead">Villancicos y misa criolla en vivo, con órgano, cuerdas, vientos o cajón, para encendidos de árbol, fiestas de fin de año y celebraciones de su empresa.</p>
         <div class="btn-row">
           <a class="btn btn--primary" href="#cotizar">Cotizar presentación<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
           <a class="btn btn--secondary" href="#paquetes">Ver paquetes</a>
@@ -114,6 +115,22 @@
     </div>
   </section>
 
+
+  <!-- INSTRUMENTOS: las formaciones con las que el coro sale a tocar -->
+  <section class="section" id="instrumentos" aria-labelledby="instrumentos-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="instrumentos-h">Formaciones e instrumentos. <span class="muted">El coro canta con músicos en vivo.</span></h2>
+      </div>
+      <div class="grid formaciones">
+        <article class="card span-6"><h3>Coro con órgano</h3><p>Para misas, matrimonios y villancicos clásicos en iglesias y salones.</p></article>
+        <article class="card span-6"><h3>Coro con cuerdas</h3><p>Violín, viola y chelo acompañando al coro en eventos y ceremonias.</p></article>
+        <article class="card span-6"><h3>Coro con vientos</h3><p>Saxo y flauta para recepciones, brindis y fiestas de fin de año.</p></article>
+        <article class="card span-6"><h3>Misa criolla</h3><p>Con cajón e instrumentos criollos, para misas y celebraciones peruanas.</p></article>
+      </div>
+    </div>
+  </section>
+
   <!-- TRAYECTORIA: momento word-highlight (una frase que se pinta palabra por palabra al pasar).
        Cuando llegue la lista de trayectoria, va en una sección propia debajo de esta. -->
   <section class="section statement" id="trayectoria" data-moment="word-highlight" aria-label="Trayectoria">
@@ -132,23 +149,32 @@
       </div>
       <div class="grid grid--top">
         <ol class="pasos span-5">
-          <li><span class="step-num">1</span><div><h3>Formulario con su fecha y distrito</h3><p>Fecha, distrito, tipo de evento y el paquete que le interesa.</p></div></li>
-          <li><span class="step-num">2</span><div><h3>Mensaje listo en WhatsApp</h3><p>Se abre WhatsApp con sus datos ya escritos, dirigido al +51 939 942 404.</p></div></li>
+          <li><span class="step-num">1</span><div><h3>Formulario con su fecha y distrito</h3><p>Fecha, distrito, tipo de evento y los instrumentos que le interesan.</p></div></li>
+          <li><span class="step-num">2</span><div><h3>Envío por WhatsApp o por correo</h3><p>WhatsApp se abre con sus datos escritos. Si su empresa pide la cotización por escrito, use el correo.</p></div></li>
           <li><span class="step-num">3</span><div><h3>Precio y fecha separada</h3><p>Le respondemos con el precio y los detalles para separar su fecha.</p></div></li>
         </ol>
-        <form class="form span-6 start-7" id="form-cotizar" action="https://wa.me/51939942404" method="get" data-fix="Faltan {n} datos." novalidate>
-          <div class="field"><label for="f-nombre">Nombre o empresa</label>
+        <form class="form span-6 start-7" id="form-cotizar" action="https://formsubmit.co/angelesdemaria.eventos@gmail.com" method="post" data-fix="Datos por completar: {n}." data-sending="Enviando" data-sent="Su pedido de cotización llegó al correo del coro. Le respondemos por correo." data-failed="No se envió: falló la conexión. Sus datos siguen aquí; intente de nuevo o use WhatsApp." novalidate>
+          <input type="hidden" name="_subject" value="Nueva cotización desde la web del coro">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="field field--full"><label for="f-nombre">Nombre o empresa</label>
             <input id="f-nombre" name="nombre" type="text" autocomplete="organization" required aria-describedby="f-nombre-err">
             <p class="field__error" id="f-nombre-err" hidden>Escriba su nombre o el de su empresa.</p></div>
+          <div class="field"><label for="f-correo">Correo</label>
+            <input id="f-correo" name="correo" type="email" autocomplete="email" inputmode="email" aria-describedby="f-correo-err">
+            <p class="field__error" id="f-correo-err" hidden>Escriba un correo con @ para recibir la cotización.</p></div>
           <div class="field"><label for="f-evento">Tipo de evento</label>
             <select id="f-evento" name="evento" required aria-describedby="f-evento-err">
               <option value="">Elija una opción</option>
-              <option value="arbol">Encendido de árbol</option>
-              <option value="fin-de-ano">Fiesta de fin de año</option>
-              <option value="centro-comercial">Centro comercial</option>
-              <option value="municipal">Evento municipal o institucional</option>
-              <option value="misa">Misa o celebración religiosa</option>
-              <option value="otro">Otro</option>
+              <option>Villancicos navideños</option>
+              <option>Encendido de árbol</option>
+              <option>Evento corporativo o fin de año</option>
+              <option>Centro comercial</option>
+              <option>Evento municipal o institucional</option>
+              <option>Misa criolla</option>
+              <option>Misa o celebración religiosa</option>
+              <option>Matrimonio</option>
+              <option>Otro</option>
             </select>
             <p class="field__error" id="f-evento-err" hidden>Elija el tipo de evento.</p></div>
           <div class="field"><label for="f-fecha">Fecha</label>
@@ -157,21 +183,23 @@
           <div class="field"><label for="f-distrito">Distrito</label>
             <input id="f-distrito" name="distrito" type="text" autocomplete="address-level2" required aria-describedby="f-distrito-err">
             <p class="field__error" id="f-distrito-err" hidden>Escriba el distrito donde será el evento.</p></div>
-          <div class="field"><label for="f-paquete">Paquete</label>
-            <select id="f-paquete" name="paquete" required aria-describedby="f-paquete-err">
-              <option value="">Elija un paquete</option>
-              <option value="express">Villancico express</option>
-              <option value="arbol">Encendido de árbol</option>
-              <option value="corporativa">Navidad corporativa</option>
-              <option value="temporada">Temporada en centro comercial</option>
-              <option value="no-se">Todavía no sé</option>
-            </select>
-            <p class="field__error" id="f-paquete-err" hidden>Elija un paquete, o "Todavía no sé".</p></div>
+          <fieldset class="field field--full instrumentos">
+            <legend>Instrumentos que le interesan (opcional)</legend>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Órgano"> Órgano</label>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Violín, viola y chelo"> Violín, viola y chelo</label>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Saxo"> Saxo</label>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Flauta"> Flauta</label>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Cajón e instrumentos criollos"> Cajón e instrumentos criollos</label>
+            <label class="check"><input type="checkbox" name="instrumentos" value="Solo voces"> Solo voces</label>
+          </fieldset>
           <div class="field field--full"><label for="f-detalles">Detalles del evento (opcional)</label>
-            <textarea id="f-detalles" name="detalles" rows="3"></textarea></div>
-          <div class="btn-row"><button class="btn btn--primary" type="submit">Cotizar presentación</button></div>
+            <textarea id="f-detalles" name="detalles" rows="2"></textarea></div>
+          <div class="btn-row">
+            <button class="btn btn--primary" type="submit" data-enviar="whatsapp">Cotizar presentación</button>
+            <button class="btn btn--secondary" type="submit" data-enviar="correo">Enviar por correo</button>
+          </div>
           <p class="form__status" role="status" data-form-status></p>
-          <p class="t-small form__nota">Le respondemos por WhatsApp con el precio y las fechas libres de diciembre.</p>
+          <p class="t-small form__nota">WhatsApp se abre con sus datos escritos; el correo llega a la bandeja del coro.</p>
         </form>
       </div>
     </div>
@@ -212,7 +240,7 @@
           <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Ángeles de María</a>
           <p class="footer__lede">Coro juvenil de villancicos para empresas, centros comerciales y municipalidades en Lima.</p>
         </div>
-        <div class="span-2 start-7 footer__col"><h3>El coro</h3><ul><li><a href="#paquetes">Paquetes</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
+        <div class="span-2 start-7 footer__col"><h3>El coro</h3><ul><li><a href="#paquetes">Paquetes</a></li><li><a href="#instrumentos">Instrumentos</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contratar</h3><ul><li><a href="#cotizar">Cotizar</a></li><li><a href="#preguntas">Preguntas</a></li></ul></div>
         <div class="span-2 footer__col"><h3>WhatsApp</h3><ul><li><a href="https://wa.me/51939942404">+51 939 942 404</a></li></ul></div>
       </div>

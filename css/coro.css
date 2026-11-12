@@ -61,3 +61,62 @@
     grid-column: 1 / -1;
   }
 }
+
+/* Formulario: casillas de instrumentos */
+.instrumentos {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s-2) var(--s-4);
+}
+
+.instrumentos legend {
+  font-size: var(--t-small);
+  font-weight: 500;
+  margin-bottom: var(--s-2);
+  padding: 0;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  min-height: 44px;
+  font-size: var(--t-body);
+  cursor: pointer;
+}
+
+.check input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  accent-color: var(--action);
+}
+
+/* casillas: 2 columnas en celular, 3 en computadora */
+.instrumentos { grid-template-columns: 1fr 1fr; }
+.check { font-size: var(--t-small); }
+
+@media (min-width: 1024px) {
+  .instrumentos { grid-template-columns: repeat(3, 1fr); }
+}
+
+#form-cotizar textarea { min-height: 88px; }
+
+/* tablet: la sección de cotizar ocupa dos pantallas */
+@media (min-width: 640px) and (max-width: 1023px) {
+  #cotizar { --h: 2; }
+}
+
+/* celular: los pasos solo con su título, para que el formulario entre en dos pantallas */
+@media (max-width: 639px) {
+  .pasos { gap: var(--s-4); }
+  .pasos p { display: none; }
+}
+
+/* Formaciones: las 4 tarjetas a la misma altura */
+.formaciones .card {
+  min-height: 160px;
+}
