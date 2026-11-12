@@ -5,20 +5,43 @@
    ========================================================== */
 
 /* ----------------------------------------------------------
-   IDENTIDAD: el dorado del ángel del logo
-   --oro         detalles (marca, bordes, líneas)
-   --oro-texto   textos pequeños en dorado sobre fondo claro (5:1)
-   --oro-claro   dorado sobre el fondo oscuro del pie (7:1)
+   IDENTIDAD (manual de marca de Ángeles de María)
+   --oro         dorado suave: detalles (bordes, líneas)
+   --oro-texto   dorado oscuro para textos pequeños sobre marfil (5:1)
+   --oro-claro   dorado sobre el fondo vino del pie (7:1)
    ---------------------------------------------------------- */
 :root {
-  --oro: #b08a3e;
-  --oro-texto: #86631f;
-  --oro-claro: #d4b06a;
+  --oro: #c68c5c;
+  --oro-texto: #8a5a2e;
+  --oro-claro: #e3be80;
 }
 
-/* la marca junto al nombre va en dorado, como el ángel del logo */
-.mark { background: var(--oro); }
-.ground-inverse .mark { background: var(--oro-claro); }
+/* el ángel junto al nombre, en la barra y en el pie */
+.nav__logo { font-weight: 500; letter-spacing: 0; }
+.nav__logo img { height: 34px; width: auto; }
+@media (max-width: 639px) { .nav__logo img { height: 28px; } }
+
+/* el logo completo (óvalo) arriba del título */
+.hero__logo {
+  display: block;
+  width: min(300px, 70vw);
+  height: auto;
+  margin: 0 0 var(--s-6) -6px;
+}
+@media (max-width: 639px) { .hero__logo { width: min(240px, 66vw); margin-bottom: var(--s-4); } }
+
+/* computadora: el logo grande a la derecha del título, para que el hero no quede vacío */
+@media (min-width: 1024px) {
+  .hero--statement .hero-text > div:first-child {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
+    column-gap: var(--s-9, 72px);
+    align-items: center;
+    margin-block: auto;
+  }
+  .hero--statement .hero-text > div:first-child > :not(.hero__logo) { grid-column: 1; }
+  .hero--statement .hero__logo { grid-column: 2; grid-row: 1 / span 3; width: 100%; margin: 0; }
+}
 
 /* etiquetas pequeñas (Trayectoria) en dorado */
 .statement .t-label { color: var(--oro-texto); }

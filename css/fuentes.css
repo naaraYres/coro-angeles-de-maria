@@ -1,21 +1,21 @@
 /* ==========================================================
    FUENTES (guardadas en /fonts, no dependen de Google)
-   Source Serif 4: títulos.  Libre Franklin: textos.
-   Licencia: SIL Open Font License (libres para uso comercial).
+   EB Garamond: títulos.  Montserrat: textos, datos y precios.
+   Las mismas del manual de marca. Licencia: SIL Open Font License.
    ========================================================== */
 
 @font-face {
-  font-family: "Source Serif 4";
+  font-family: "EB Garamond";
   font-style: normal;
   font-display: swap;
-  font-weight: 200 900;
-  src: url("../fonts/source-serif-4.woff2") format("woff2-variations");
+  font-weight: 400 800;
+  src: url("../fonts/eb-garamond.woff2") format("woff2-variations");
 }
 
 @font-face {
-  font-family: "Libre Franklin";
+  font-family: "Montserrat";
   font-style: normal;
   font-display: swap;
   font-weight: 100 900;
-  src: url("../fonts/libre-franklin.woff2") format("woff2-variations");
+  src: url("../fonts/montserrat.woff2") format("woff2-variations");
 }
