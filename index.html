@@ -194,6 +194,9 @@
           </fieldset>
           <div class="field field--full"><label for="f-detalles">Detalles del evento (opcional)</label>
             <textarea id="f-detalles" name="detalles" rows="2"></textarea></div>
+          <div class="field field--full consent">
+            <label class="check"><input type="checkbox" name="acepta_privacidad" value="Sí" required aria-describedby="f-consent-err"><span>He leído la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a> y acepto que usen mis datos para responder mi cotización.</span></label>
+            <p class="field__error" id="f-consent-err" hidden>Marque la casilla para poder enviarle la cotización.</p></div>
           <div class="btn-row">
             <button class="btn btn--primary" type="submit" data-enviar="whatsapp">Cotizar presentación</button>
             <button class="btn btn--secondary" type="submit" data-enviar="correo">Enviar por correo</button>
@@ -240,13 +243,14 @@
           <a class="nav__logo" href="#top"><img src="img/angel-claro.svg" alt="" width="38" height="36">Ángeles de María</a>
           <p class="footer__lede">Coro juvenil con músicos en vivo para misas, ceremonias, empresas, centros comerciales y municipalidades en Lima.</p>
         </div>
-        <div class="span-2 start-7 footer__col"><h3>El coro</h3><ul><li><a href="#servicios">Servicios</a></li><li><a href="#instrumentos">Instrumentos</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
+        <div class="span-2 start-5 footer__col"><h3>El coro</h3><ul><li><a href="#servicios">Servicios</a></li><li><a href="#instrumentos">Instrumentos</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contratar</h3><ul><li><a href="#cotizar">Cotizar</a></li><li><a href="#preguntas">Preguntas</a></li></ul></div>
         <div class="span-2 footer__col"><h3>WhatsApp</h3><ul><li><a href="https://wa.me/51939942404">+51 939 942 404</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Legal</h3><ul><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="terminos.html">Términos y condiciones</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
       </div>
       <div class="footer__legal">
-        <span>&copy; 2026 Coro Ángeles de María</span>
-        <div class="socials"></div>
+        <span>&copy; 2026 Ángeles de María · <span data-negocio="razonSocial">[razón social]</span> · RUC <span data-negocio="ruc">[RUC]</span></span>
+        <a class="libro-link" href="libro-de-reclamaciones.html"><img src="img/libro-reclamaciones-claro.svg" alt="" width="28" height="28">Libro de Reclamaciones</a>
       </div>
     </div>
   </div>
@@ -257,6 +261,7 @@
 </nav>
 
 <script src="js/config.js"></script>
+<script src="js/legal.js"></script>
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>

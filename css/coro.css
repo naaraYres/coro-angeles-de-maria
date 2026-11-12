@@ -175,3 +175,38 @@
 .formaciones .card {
   min-height: 160px;
 }
+
+/* ----------------------------------------------------------
+   LEGAL: casilla de privacidad, enlace al Libro de Reclamaciones,
+   páginas de privacidad, términos, cookies y libro
+   ---------------------------------------------------------- */
+.consent .check { align-items: flex-start; line-height: 1.5; }
+.consent .check input { margin-top: 0.25em; flex: none; }
+.consent a { text-decoration: underline; text-underline-offset: 2px; }
+
+.libro-link { display: inline-flex; align-items: center; gap: var(--s-2); min-height: 44px;
+  padding: 4px 14px 4px 8px; border: 1px solid var(--oro-claro); border-radius: 999px; color: var(--ink); font-weight: 500; }
+.libro-link img { width: 28px; height: 28px; }
+.libro-link:hover { background: color-mix(in oklab, var(--oro-claro) 18%, transparent); }
+
+main > section:is(.legal-hero, .legal-section) { --h: 0; --hm: 0; height: auto; min-height: 0; }
+main > section:is(.legal-hero, .legal-section) > .wrap { height: auto; }
+main > section.legal-hero { padding-bottom: 0; }
+.legal-hero .eyebrow { color: var(--muted); font-size: 14px; margin-bottom: var(--s-4); }
+.legal-hero .eyebrow a { text-decoration: underline; text-underline-offset: 2px; }
+.legal-lead { max-width: 60ch; color: var(--muted); margin-top: var(--s-4); font-size: 1.1rem; }
+main > section.legal-section { padding-top: var(--s-7); }
+.legal { max-width: 70ch; }
+.legal h2 { font-size: clamp(1.4rem, 2.4vw, 1.75rem); margin: var(--s-8) 0 var(--s-3); }
+.legal p, .legal li { line-height: 1.65; }
+.legal p + p { margin-top: var(--s-3); }
+.legal ul { margin: var(--s-3) 0 0; padding-left: 1.2em; list-style: disc; }
+.legal li + li { margin-top: var(--s-2); }
+.legal a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+.legal-updated { color: var(--muted); font-size: 14px; }
+.libro-cta { display: flex; gap: var(--s-5); align-items: flex-start; padding: var(--s-6);
+  margin-top: var(--s-5); background: var(--p-surface); border-radius: var(--r-md, 10px); border: 1px solid color-mix(in oklab, var(--oro) 45%, transparent); }
+.libro-cta img { flex: none; width: 56px; height: 56px; }
+.libro-cta .btn { margin-top: var(--s-4); }
+.libro-cta .btn[hidden], [data-libro-pendiente][hidden] { display: none; }
+@media (max-width: 639px) { .libro-cta { flex-direction: column; padding: var(--s-5); } }
