@@ -14,7 +14,8 @@ coro-angeles-de-maria/
 ├── js/
 │   ├── config.js       Número de WhatsApp y saludo  ← aquí se cambia el número
 │   └── cotizador.js    Arma el mensaje y abre WhatsApp
-├── fonts/              Source Serif 4 y Libre Franklin (licencia libre)
+├── fonts/              EB Garamond y Montserrat (las del manual de marca, licencia libre)
+├── img/                Logo principal (óvalo) y el ángel, en vector
 ├── assets/             Sistema de diseño (skill Taste): grilla, botones, animaciones. No se edita.
 └── .claude/skills/     Skills de diseño: Impeccable, Taste, Emil Kowalski
 ```
@@ -31,7 +32,7 @@ coro-angeles-de-maria/
 ## Pendiente (lo tiene que pasar el coro)
 
 - [ ] **Fotos y videos** del coro: con uniforme, en un encendido de árbol, en Canal 4 o Saga Falabella. Es lo que más falta: hoy la web va solo con texto.
-- [ ] **Logo** en archivo (el del flyer: óvalo, clave de sol, ángel dorado). Hoy lleva un ícono temporal.
+- [x] **Logo** e identidad: logo principal, ángel, colores (marfil, terracota, dorado suave, vino oscuro) y fuentes del manual de marca.
 - [ ] **Lista de trayectoria** (años, lugares, clientes).
 - [ ] Confirmar si la nota de RPP (Miraflores) es de este coro.
 - [ ] **Precios** de cada paquete. Hoy dice "el precio depende de la fecha, el distrito y el paquete".
