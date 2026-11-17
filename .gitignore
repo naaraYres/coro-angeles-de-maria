@@ -2,3 +2,5 @@ shots/
 .taste-skill/chrome-*/
 .taste-skill/gate/
 node_modules/
+marca/fuente/fonts/
+__pycache__/

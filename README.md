@@ -16,6 +16,7 @@ coro-angeles-de-maria/
 │   └── cotizador.js    Arma el mensaje y abre WhatsApp
 ├── fonts/              EB Garamond y Montserrat (las del manual de marca, licencia libre)
 ├── img/                Logo principal (óvalo) y el ángel, en vector
+├── marca/              Manual de marca, todos los logos (PNG y SVG) y archivos para editarlos
 ├── assets/             Sistema de diseño (skill Taste): grilla, botones, animaciones. No se edita.
 └── .claude/skills/     Skills de diseño: Impeccable, Taste, Emil Kowalski
 ```
