@@ -26,5 +26,5 @@ window.CORO = {
   libroReclamaciones: "",
 
   // Saludo con el que empieza el mensaje de cotización.
-  saludo: "Hola, quiero cotizar una presentación del Coro Ángeles de María."
+  saludo: "Buenos días, quisiera una cotización de música en vivo para nuestro evento."
 };
