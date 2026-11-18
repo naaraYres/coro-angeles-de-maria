@@ -44,6 +44,8 @@
 <link rel="stylesheet" href="css/coro.css">
 <!-- estilo de la página de ejemplo (aprendamosmarketing.com) con los colores de la marca -->
 <link rel="stylesheet" href="css/ejemplo.css">
+<!-- animaciones suaves al bajar (js/animaciones.js); con movimiento reducido no se esconde nada -->
+<script>if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&'IntersectionObserver'in window)document.documentElement.classList.add('anim-js')</script>
 
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
@@ -151,19 +153,19 @@
       <h2 id="elija-h">¿Qué evento está organizando?</h2>
       <div class="ej-cards">
         <article class="ej-card">
-          <img src="img/fotos/villancicos-tienda.jpg" alt="El coro con gorros navideños canta villancicos dentro de una tienda" width="960" height="720">
+          <div class="ej-zoom ej-card__foto"><img src="img/fotos/villancicos-tienda.jpg" alt="El coro con gorros navideños canta villancicos dentro de una tienda" width="960" height="720"></div>
           <h3>Navidad corporativa y centros comerciales</h3>
           <p>Villancicos en vivo, encendido de árbol con cuenta regresiva cantada y temporadas de diciembre.</p>
           <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Navidad corporativa o fin de año">Reservar fecha navideña</a>
         </article>
         <article class="ej-card">
-          <img src="img/fotos/misa-iglesia.jpg" alt="Niñas y niños del coro con túnicas blancas dentro de una iglesia" width="960" height="489">
+          <div class="ej-zoom ej-card__foto"><img src="img/fotos/misa-iglesia.jpg" alt="Niñas y niños del coro con túnicas blancas dentro de una iglesia" width="960" height="489"></div>
           <h3>Misas, matrimonios y ceremonias</h3>
           <p>Coro con violines y órgano, o misa criolla con cajón peruano, para momentos solemnes.</p>
           <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Misa o ceremonia religiosa">Cotizar ceremonia</a>
         </article>
         <article class="ej-card">
-          <img src="img/fotos/evento-jardin.jpg" alt="Recepción en un jardín bajo un toldo blanco con mesas decoradas y arreglos de flores" width="1080" height="1080" style="--pos: 50% 45%">
+          <div class="ej-zoom ej-card__foto"><img src="img/fotos/evento-jardin.jpg" alt="Recepción en un jardín bajo un toldo blanco con mesas decoradas y arreglos de flores" width="1080" height="1080" style="--pos: 50% 45%"></div>
           <h3>Galas, aniversarios y eventos completos</h3>
           <p>Música en vivo, sonido, mesas, mantelería y decoración en una sola propuesta.</p>
           <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Organización del evento completo">Cotizar evento completo</a>
@@ -210,8 +212,8 @@
         <a class="ej-btn" href="#cotizar" data-evento="Organización del evento completo">Cotizar evento completo <span aria-hidden="true">»</span></a>
       </div>
       <div class="ej-duo">
-        <img src="img/fotos/evento-terraza.jpg" alt="Mesas de recepción con mantel gris y detalles turquesa en una terraza de noche" width="914" height="1280" style="--pos: 50% 65%">
-        <img src="img/fotos/evento-salon.jpg" alt="Salón de recepción con mesas redondas y mantelería blanca" width="720" height="1280" style="--pos: 50% 45%">
+        <div class="ej-zoom"><img src="img/fotos/evento-terraza.jpg" alt="Mesas de recepción con mantel gris y detalles turquesa en una terraza de noche" width="914" height="1280" style="--pos: 50% 65%"></div>
+        <div class="ej-zoom"><img src="img/fotos/evento-salon.jpg" alt="Salón de recepción con mesas redondas y mantelería blanca" width="720" height="1280" style="--pos: 50% 45%"></div>
       </div>
     </div>
   </section>
@@ -224,11 +226,11 @@
         <li>Canal 4</li><li>Saga Falabella</li><li>Scotiabank</li><li>Mall Aventura Plaza</li><li>Teletón</li>
       </ul>
       <div class="ej-galeria">
-        <img class="g1" src="img/fotos/tv-america-la-previa.jpg" alt="Entrevista al coro en América TV por el día de Santa Rosa de Lima" width="960" height="540" loading="lazy">
-        <img class="g2" src="img/fotos/procesion.jpg" alt="El coro canta desde el estrado ante miles de personas en una procesión en Lima" width="960" height="540" loading="lazy">
-        <img class="g3" src="img/fotos/empresa-scotiabank.jpg" alt="Presentación navideña del coro en una agencia de Scotiabank" width="960" height="890" loading="lazy" style="--pos: 50% 88%">
-        <img class="g4" src="img/fotos/tv-set-navidad.jpg" alt="El coro en un set de televisión durante un especial de Navidad" width="960" height="720" loading="lazy">
-        <img class="g5" src="img/fotos/teleton.jpg" alt="Niños del coro cantando villancicos en la Teletón" width="1080" height="720" loading="lazy">
+        <div class="ej-zoom g1"><img src="img/fotos/tv-america-la-previa.jpg" alt="Entrevista al coro en América TV por el día de Santa Rosa de Lima" width="960" height="540" loading="lazy"></div>
+        <div class="ej-zoom g2"><img src="img/fotos/procesion.jpg" alt="El coro canta desde el estrado ante miles de personas en una procesión en Lima" width="960" height="540" loading="lazy"></div>
+        <div class="ej-zoom g3"><img src="img/fotos/empresa-scotiabank.jpg" alt="Presentación navideña del coro en una agencia de Scotiabank" width="960" height="890" loading="lazy" style="--pos: 50% 88%"></div>
+        <div class="ej-zoom g4"><img src="img/fotos/tv-set-navidad.jpg" alt="El coro en un set de televisión durante un especial de Navidad" width="960" height="720" loading="lazy"></div>
+        <div class="ej-zoom g5"><img src="img/fotos/teleton.jpg" alt="Niños del coro cantando villancicos en la Teletón" width="1080" height="720" loading="lazy"></div>
       </div>
       <p class="ej-frase">Nuestra trayectoria abarca presentaciones en televisión de señal abierta, ceremonias oficiales, encendidos de árbol en centros comerciales y galas empresariales. Hoy trabajamos con tres formaciones (niños, jóvenes y adultos) y un ensamble de violines, instrumentos acústicos y cajón peruano.</p>
     </div>

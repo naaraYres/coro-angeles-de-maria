@@ -49,13 +49,10 @@ main h1, main h2, main h3, .closing h2 {
   min-height: 52px; padding: 14px 32px; border-radius: 8px;
   background: var(--ej-grad-btn); color: #fff; box-shadow: var(--ej-sombra);
   font: 700 17px/1.2 "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: .02em;
-  text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+  text-decoration: none;
 }
-.ej-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 16px 30px -10px rgba(100, 25, 11, .55); }
-.ej-btn:active { transform: translateY(0); }
 .ej-btn--xl { font-size: clamp(18px, 1.2vw + 10px, 24px); padding: 24px 44px; min-height: 76px; width: 100%; max-width: 600px; }
 .ej-btn--claro { background: #fff; color: var(--ej-vino); box-shadow: none; font-size: 15px; padding: 12px 24px; }
-.ej-btn--claro:hover { box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .5); }
 
 /* ---------- 1. portada ---------- */
 .ej-hero { padding: calc(var(--nav, 72px) + 56px) 0 80px; background: var(--ej-blanco); }
@@ -97,10 +94,9 @@ main h1, main h2, main h3, .closing h2 {
 .ej-card {
   border: 1.5px solid rgba(255, 255, 255, .85); border-radius: 10px; padding: 20px 20px 28px;
   display: flex; flex-direction: column; align-items: center; gap: 12px;
-  transition: transform .2s ease, background .2s ease;
 }
-.ej-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .06); }
-.ej-card img { width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 8px; margin-bottom: 8px; }
+.ej-card__foto { width: 100%; border-radius: 8px; margin-bottom: 8px; }
+.ej-card img { display: block; width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: var(--pos, 50% 50%); }
 .ej-card h3 { color: #fff; font-size: 19px; font-weight: 700; margin: 0; }
 .ej-card p { color: #f6e3cf; margin: 0 0 8px; font-size: 15px; }
 .ej-card .ej-btn { margin-top: auto; }
@@ -126,9 +122,8 @@ main h1, main h2, main h3, .closing h2 {
 .ej-servicios { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .ej-servicios li {
   background: #fff; border: 1px solid #efe2d3; border-radius: 14px; padding: 28px 26px;
-  display: flex; flex-direction: column; gap: 10px; transition: transform .2s ease, box-shadow .2s ease;
+  display: flex; flex-direction: column; gap: 10px;
 }
-.ej-servicios li:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -22px rgba(100, 25, 11, .45); }
 .ej-servicios h3 { margin: 0; font-size: 19px; font-weight: 700; }
 .ej-servicios p { margin: 0; font-size: 15px; line-height: 1.6; flex: 1; }
 .ej-servicios span { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ej-terracota); background: #f9ece0; border-radius: 999px; padding: 6px 12px; }
@@ -142,8 +137,9 @@ main h1, main h2, main h3, .closing h2 {
 .ej-lista { list-style: none; margin: 8px 0 36px; padding: 0; display: grid; gap: 18px; font-size: 17px; line-height: 1.6; }
 .ej-lista b { color: var(--ej-tinta); }
 .ej-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-.ej-duo img { width: 100%; aspect-ratio: 3 / 4.2; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 18px; }
-.ej-duo img:last-child { margin-top: 48px; }
+.ej-duo .ej-zoom { border-radius: 18px; }
+.ej-duo img { display: block; width: 100%; aspect-ratio: 3 / 4.2; object-fit: cover; object-position: var(--pos, 50% 50%); }
+.ej-duo > :last-child { margin-top: 48px; }
 
 /* dónde nos han visto */
 .ej-titulo-caps { text-transform: uppercase; font-size: clamp(22px, 1.4vw + 14px, 34px) !important; font-weight: 800 !important; }
@@ -152,7 +148,8 @@ main h1, main h2, main h3, .closing h2 {
   font: 600 clamp(18px, 1vw + 12px, 26px)/1.2 "EB Garamond", Georgia, serif; color: #7a6458;
 }
 .ej-galeria { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 200px; gap: 14px; }
-.ej-galeria img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 14px; }
+.ej-galeria .ej-zoom { border-radius: 14px; }
+.ej-galeria img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); }
 .ej-galeria .g1 { grid-column: span 6; grid-row: span 2; }
 .ej-galeria .g2 { grid-column: span 6; grid-row: span 1; }
 .ej-galeria .g3 { grid-column: span 2; }
@@ -196,12 +193,9 @@ main h1, main h2, main h3, .closing h2 {
   .ej-galeria .g1, .ej-galeria .g2 { grid-column: span 2; grid-row: span 1; }
   .ej-galeria .g3, .ej-galeria .g4 { grid-column: span 1; }
   .ej-galeria .g5 { grid-column: span 2; }
-  .ej-duo img:last-child { margin-top: 32px; }
+  .ej-duo > :last-child { margin-top: 32px; }
 }
-@media (prefers-reduced-motion: reduce) {
-  .ej-btn, .ej-card, .ej-servicios li { transition: none; }
-  html { scroll-behavior: auto; }
-}
+
 
 /* pie: título blanco y botón como los demás */
 .closing h2 { color: #fff !important; font-weight: 700; }
@@ -210,3 +204,54 @@ main h1, main h2, main h3, .closing h2 {
 .closing .btn--primary svg { display: none; }
 .closing .btn--primary::after { content: "»"; }
 footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px !important; }
+
+/* ==========================================================
+   MOVIMIENTO (js/animaciones.js + estas reglas)
+   Solo transform y opacity. Curva suave sin rebote; 0.3 a 0.7 s.
+   ========================================================== */
+:root { --ej-curva: cubic-bezier(0.22, 1, 0.36, 1); }
+
+/* 1. Aparición al bajar: sube 18px y aparece, una sola vez.
+      La cascada usa --retraso (100 ms por tarjeta), lo pone el script. */
+.anim-js .al-entrar { opacity: 0; transform: translate3d(0, 18px, 0); }
+.anim-js .al-entrar.visible {
+  opacity: 1; transform: none;
+  transition: opacity .7s var(--ej-curva) var(--retraso, 0ms), transform .7s var(--ej-curva) var(--retraso, 0ms) !important;
+}
+
+/* 2. Botones: suben 2px, la sombra se refuerza (capa aparte con opacidad) y al presionar bajan */
+.ej-btn { position: relative; isolation: isolate; transition: transform .35s var(--ej-curva); will-change: transform; }
+.ej-btn::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; border-radius: inherit; pointer-events: none;
+  box-shadow: 0 18px 32px -12px rgba(100, 25, 11, .6); opacity: 0; transition: opacity .35s var(--ej-curva);
+}
+.ej-btn--claro::after { box-shadow: 0 14px 26px -12px rgba(0, 0, 0, .55); }
+.ej-btn:hover { transform: translate3d(0, -2px, 0); }
+.ej-btn:hover::after { opacity: 1; }
+.ej-btn:active { transform: translate3d(0, 0, 0) scale(.98); transition-duration: .12s; }
+.ej-btn:active::after { opacity: .4; }
+.ej-btn:focus-visible { outline: 2px solid var(--ej-dorado); outline-offset: 3px; }
+
+/* 3a. Tarjetas: elevación discreta y borde o sombra que aparece suave */
+.ej-card, .ej-servicios li { position: relative; isolation: isolate; transition: transform .45s var(--ej-curva); }
+.ej-card::after, .ej-servicios li::after {
+  content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; pointer-events: none;
+  opacity: 0; transition: opacity .45s var(--ej-curva);
+}
+.ej-card::after { border: 1.5px solid #fff; background: rgba(255, 255, 255, .05); }
+.ej-servicios li::after { box-shadow: 0 20px 38px -22px rgba(100, 25, 11, .5); border: 1px solid #e3cbb3; }
+.ej-card:hover, .ej-servicios li:hover { transform: translate3d(0, -4px, 0); }
+.ej-card:hover::after, .ej-servicios li:hover::after { opacity: 1; }
+
+/* 3b. Fotos: zoom lento dentro de su marco, sin mover el encuadre */
+.ej-zoom { display: block; overflow: hidden; transform: translateZ(0); }
+.ej-zoom img { transition: transform .7s var(--ej-curva); will-change: transform; }
+.ej-zoom:hover img, .ej-card:hover .ej-zoom img { transform: scale(1.03); }
+
+/* Movimiento reducido: nada se esconde ni se mueve */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .anim-js .al-entrar { opacity: 1 !important; transform: none !important; }
+  .ej-btn, .ej-btn::after, .ej-card, .ej-card::after, .ej-servicios li, .ej-servicios li::after, .ej-zoom img { transition: none !important; }
+  .ej-btn:hover, .ej-btn:active, .ej-card:hover, .ej-servicios li:hover, .ej-zoom:hover img, .ej-card:hover .ej-zoom img { transform: none !important; }
+}
