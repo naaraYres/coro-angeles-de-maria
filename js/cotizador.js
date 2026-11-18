@@ -71,3 +71,12 @@ if (form) {
     window.location.href = `https://wa.me/${config.whatsapp}?text=${encodeURIComponent(armarMensaje())}`;
   });
 }
+
+/* Las tarjetas "¿Qué evento tiene?" (data-evento) dejan elegido el tipo de evento en el formulario */
+document.addEventListener('click', (e) => {
+  const enlace = e.target.closest('[data-evento]');
+  if (!enlace || !form) return;
+  const select = form.elements.evento;
+  const opcion = [...select.options].find(o => o.text.trim() === enlace.dataset.evento);
+  if (opcion) select.value = opcion.value;
+});

@@ -1,0 +1,212 @@
+/* ==========================================================
+   ESTILO DE LA PÁGINA DE EJEMPLO (aprendamosmarketing.com)
+   con los colores del manual de marca de Ángeles de María.
+   - Fondo blanco, títulos gruesos en Montserrat.
+   - Palabras clave en degradé dorado → terracota.
+   - Botones grandes en mayúsculas, con degradé y sombra.
+   - Franjas de color vino a todo lo ancho, con letra blanca.
+   - Franja gris-marfil para los lugares donde se han presentado.
+   Se carga al final: manda sobre assets/ y css/coro.css.
+   ========================================================== */
+
+:root {
+  --ej-blanco: #ffffff;
+  --ej-tinta: #1f1612;
+  --ej-texto: #3d2f28;
+  --ej-gris: #f7f1ea;         /* franja clara (marfil muy suave) */
+  --ej-suave: #fdf8f2;
+  --ej-vino: #64190b;
+  --ej-terracota: #8f422c;
+  --ej-dorado: #c68c5c;
+  --ej-grad: linear-gradient(90deg, #c68c5c 0%, #a65a33 55%, #8f422c 100%);
+  --ej-grad-btn: linear-gradient(90deg, #c68c5c 0%, #8f422c 55%, #64190b 100%);
+  --ej-sombra: 0 10px 24px -8px rgba(100, 25, 11, .45);
+  --ej-ancho: 1200px;
+}
+
+/* ---------- base: la página deja de ser "una sección por pantalla" ---------- */
+html { scroll-behavior: smooth; }
+body { background: var(--ej-blanco); color: var(--ej-texto); font-family: "Montserrat", system-ui, sans-serif; }
+main > section, main > .section, footer.closing {
+  height: auto !important; min-height: 0 !important;
+}
+main > section > .wrap, footer.closing > .wrap { height: auto !important; }
+.nav { background: rgba(255, 255, 255, .96); }
+main h1, main h2, main h3, .closing h2 {
+  font-family: "Montserrat", system-ui, sans-serif; color: var(--ej-tinta); letter-spacing: -0.01em;
+}
+
+.ej-wrap { width: min(var(--ej-ancho), 100% - 48px); margin-inline: auto; }
+.ej-centro { text-align: center; margin-inline: auto; }
+.ej-grad {
+  background: var(--ej-grad); -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+}
+
+/* ---------- botones ---------- */
+.ej-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: .5em;
+  min-height: 52px; padding: 14px 32px; border-radius: 8px;
+  background: var(--ej-grad-btn); color: #fff; box-shadow: var(--ej-sombra);
+  font: 700 17px/1.2 "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: .02em;
+  text-decoration: none; transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+.ej-btn:hover { transform: translateY(-2px); filter: brightness(1.06); box-shadow: 0 16px 30px -10px rgba(100, 25, 11, .55); }
+.ej-btn:active { transform: translateY(0); }
+.ej-btn--xl { font-size: clamp(18px, 1.2vw + 10px, 24px); padding: 24px 44px; min-height: 76px; width: 100%; max-width: 600px; }
+.ej-btn--claro { background: #fff; color: var(--ej-vino); box-shadow: none; font-size: 15px; padding: 12px 24px; }
+.ej-btn--claro:hover { box-shadow: 0 10px 20px -10px rgba(0, 0, 0, .5); }
+
+/* ---------- 1. portada ---------- */
+.ej-hero { padding: calc(var(--nav, 72px) + 56px) 0 80px; background: var(--ej-blanco); }
+.ej-hero__grid { display: grid; grid-template-columns: 1.15fr .85fr; gap: 56px; align-items: center; }
+.ej-pre { font-size: 20px; color: var(--ej-vino); margin: 0 0 12px; font-weight: 500; }
+.ej-hero h1 { font-size: clamp(36px, 3.2vw + 12px, 60px); line-height: 1.1; font-weight: 700; margin: 0 0 24px; max-width: 16ch; }
+.ej-lead { font-size: 18px; line-height: 1.85; margin: 0 0 32px; max-width: 52ch; }
+.ej-lead b, .ej-sub b, .ej-split__texto p b { color: var(--ej-tinta); font-weight: 700; }
+.ej-sub { margin: 18px 0 0; font-size: 15px; max-width: 600px; text-align: center; }
+.ej-sub a { color: var(--ej-terracota); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
+.ej-hero__media { position: relative; display: grid; place-items: center; padding: 24px; }
+.ej-blob {
+  position: absolute; inset: 4% 2% 2% 6%; z-index: 0;
+  background: #f6e3cf; border-radius: 58% 42% 55% 45% / 45% 55% 45% 55%;
+}
+.ej-hero__foto {
+  position: relative; z-index: 1; width: min(440px, 100%); aspect-ratio: 1; object-fit: cover;
+  border-radius: 28px; box-shadow: 0 24px 50px -20px rgba(100, 25, 11, .45);
+}
+.ej-badges { position: absolute; z-index: 2; left: 0; bottom: 6%; display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
+.ej-badges li {
+  width: 92px; height: 92px; border-radius: 50%; background: #fff; display: grid; place-content: center; text-align: center;
+  box-shadow: 0 8px 20px -8px rgba(0, 0, 0, .35); font-size: 11px; line-height: 1.2; color: var(--ej-texto);
+}
+.ej-badges b { display: block; font-size: 15px; color: var(--ej-terracota); }
+
+/* ---------- 2 y 4. franjas de color ---------- */
+.ej-banda { background: var(--ej-vino); color: #fff; padding: 88px 0; text-align: center; }
+.ej-banda h2 { color: #fff; font-size: clamp(28px, 1.6vw + 18px, 42px); line-height: 1.2; font-weight: 700; max-width: 26ch; margin: 0 auto 16px; }
+.ej-banda__lead { font-size: 18px; margin: 0 auto 56px; color: #f6e3cf; }
+.ej-banda__lead b { color: #fff; }
+.ej-banda__pre { font-size: 18px; margin: 0 0 12px; color: #f6e3cf; }
+.ej-datos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin: 0; }
+.ej-datos dt { font-size: clamp(32px, 2.2vw + 16px, 52px); font-weight: 700; line-height: 1.1; }
+.ej-datos dd { margin: 8px 0 0; color: #f6e3cf; font-size: 15px; }
+
+.ej-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; text-align: center; }
+.ej-card {
+  border: 1.5px solid rgba(255, 255, 255, .85); border-radius: 10px; padding: 20px 20px 28px;
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  transition: transform .2s ease, background .2s ease;
+}
+.ej-card:hover { transform: translateY(-3px); background: rgba(255, 255, 255, .06); }
+.ej-card img { width: 100%; aspect-ratio: 16 / 11; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 8px; margin-bottom: 8px; }
+.ej-card h3 { color: #fff; font-size: 19px; font-weight: 700; margin: 0; }
+.ej-card p { color: #f6e3cf; margin: 0 0 8px; font-size: 15px; }
+.ej-card .ej-btn { margin-top: auto; }
+
+/* ---------- secciones blancas ---------- */
+.ej-sec { padding: 104px 0; background: var(--ej-blanco); }
+.ej-sec--suave { background: var(--ej-suave); }
+.ej-sec--gris { background: var(--ej-gris); }
+.ej-sec h2 { font-size: clamp(30px, 1.8vw + 18px, 44px); line-height: 1.2; font-weight: 700; margin: 0 0 20px; }
+
+.ej-split { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.ej-split__foto { margin: 0; border-radius: 24px; overflow: hidden; box-shadow: 0 24px 50px -24px rgba(100, 25, 11, .5); }
+.ej-split__foto img { display: block; width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; }
+.ej-split__texto > p { font-size: 17px; line-height: 1.8; margin: 0 0 32px; }
+.ej-puntos { list-style: none; margin: 0 0 36px; padding: 0; display: grid; gap: 26px; }
+.ej-puntos li { display: grid; grid-template-columns: 28px 1fr; gap: 14px; }
+.ej-puntos svg { width: 26px; height: 26px; fill: none; stroke: var(--ej-tinta); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; margin-top: 2px; }
+.ej-puntos h3 { margin: 0 0 4px; font-size: 20px; font-weight: 600; color: var(--ej-terracota); }
+.ej-puntos p { margin: 0; font-size: 15px; line-height: 1.65; }
+
+/* servicios */
+.ej-sub2 { font-size: 17px; margin-bottom: 48px; }
+.ej-servicios { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.ej-servicios li {
+  background: #fff; border: 1px solid #efe2d3; border-radius: 14px; padding: 28px 26px;
+  display: flex; flex-direction: column; gap: 10px; transition: transform .2s ease, box-shadow .2s ease;
+}
+.ej-servicios li:hover { transform: translateY(-3px); box-shadow: 0 18px 36px -22px rgba(100, 25, 11, .45); }
+.ej-servicios h3 { margin: 0; font-size: 19px; font-weight: 700; }
+.ej-servicios p { margin: 0; font-size: 15px; line-height: 1.6; flex: 1; }
+.ej-servicios span { align-self: flex-start; font-size: 13px; font-weight: 600; color: var(--ej-terracota); background: #f9ece0; border-radius: 999px; padding: 6px 12px; }
+.ej-h3 { font-size: 22px; font-weight: 700; margin: 64px auto 20px; }
+.ej-pills { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.ej-pills li { border: 1.5px solid var(--ej-terracota); border-radius: 999px; padding: 12px 18px; text-align: center; font-size: 13px; line-height: 1.4; }
+.ej-pills b { display: block; font-size: 15px; color: var(--ej-terracota); }
+
+/* organizamos su evento: lista con íconos, como la del fundador */
+.ej-split--inv { grid-template-columns: 1.05fr .95fr; }
+.ej-lista { list-style: none; margin: 8px 0 36px; padding: 0; display: grid; gap: 18px; font-size: 17px; line-height: 1.6; }
+.ej-lista b { color: var(--ej-tinta); }
+.ej-duo { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.ej-duo img { width: 100%; aspect-ratio: 3 / 4.2; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 18px; }
+.ej-duo img:last-child { margin-top: 48px; }
+
+/* dónde nos han visto */
+.ej-titulo-caps { text-transform: uppercase; font-size: clamp(22px, 1.4vw + 14px, 34px) !important; font-weight: 800 !important; }
+.ej-marcas {
+  list-style: none; margin: 32px 0 48px; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 16px 48px;
+  font: 600 clamp(18px, 1vw + 12px, 26px)/1.2 "EB Garamond", Georgia, serif; color: #7a6458;
+}
+.ej-galeria { display: grid; grid-template-columns: repeat(12, 1fr); grid-auto-rows: 200px; gap: 14px; }
+.ej-galeria img { width: 100%; height: 100%; object-fit: cover; object-position: var(--pos, 50% 50%); border-radius: 14px; }
+.ej-galeria .g1 { grid-column: span 6; grid-row: span 2; }
+.ej-galeria .g2 { grid-column: span 6; grid-row: span 1; }
+.ej-galeria .g3 { grid-column: span 2; }
+.ej-galeria .g4 { grid-column: span 2; }
+.ej-galeria .g5 { grid-column: span 2; }
+.ej-frase { max-width: 62ch; margin: 48px auto 0; text-align: center; font-size: 18px; line-height: 1.8; }
+.ej-frase b { color: var(--ej-tinta); }
+
+/* ---------- cotizar, preguntas y pie: mismo estilo ---------- */
+#cotizar, #preguntas { padding: 104px 0 !important; }
+#cotizar { background: var(--ej-suave); }
+#cotizar h2, #preguntas h2 { font-size: clamp(30px, 1.8vw + 18px, 44px); font-weight: 700; }
+#cotizar .btn--primary, .closing .btn--primary {
+  background: var(--ej-grad-btn); border: 0; box-shadow: var(--ej-sombra); text-transform: uppercase; font-weight: 700; letter-spacing: .02em;
+}
+.footer--dark { background: var(--ej-vino) !important; }
+.closing { padding-block: 96px 40px !important; }
+
+/* ---------- tablet y celular ---------- */
+@media (max-width: 1023px) {
+  .ej-hero__grid, .ej-split, .ej-split--inv { grid-template-columns: 1fr; gap: 40px; }
+  .ej-hero__media { max-width: 480px; margin-inline: auto; }
+  .ej-cards, .ej-servicios { grid-template-columns: 1fr 1fr; }
+  .ej-pills { grid-template-columns: 1fr 1fr; }
+  .ej-galeria { grid-auto-rows: 160px; }
+  .ej-galeria .g3, .ej-galeria .g4 { grid-column: span 4; }
+  .ej-galeria .g5 { grid-column: span 4; }
+}
+@media (max-width: 639px) {
+  .ej-hero { padding: calc(var(--nav, 56px) + 32px) 0 56px; }
+  .ej-pre { font-size: 16px; }
+  .ej-lead { font-size: 16px; line-height: 1.75; }
+  .ej-btn--xl { padding: 20px 24px; min-height: 64px; }
+  .ej-badges li { width: 76px; height: 76px; font-size: 10px; }
+  .ej-badges b { font-size: 13px; }
+  .ej-banda { padding: 64px 0; }
+  .ej-datos { grid-template-columns: 1fr; gap: 28px; }
+  .ej-cards, .ej-servicios, .ej-pills { grid-template-columns: 1fr; }
+  .ej-sec, #cotizar, #preguntas { padding: 72px 0 !important; }
+  .ej-galeria { grid-template-columns: 1fr 1fr; grid-auto-rows: 140px; }
+  .ej-galeria .g1, .ej-galeria .g2 { grid-column: span 2; grid-row: span 1; }
+  .ej-galeria .g3, .ej-galeria .g4 { grid-column: span 1; }
+  .ej-galeria .g5 { grid-column: span 2; }
+  .ej-duo img:last-child { margin-top: 32px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ej-btn, .ej-card, .ej-servicios li { transition: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* pie: título blanco y botón como los demás */
+.closing h2 { color: #fff !important; font-weight: 700; }
+.closing .section-head p { color: #f6e3cf; }
+.closing .btn--primary { color: #fff !important; font-family: "Montserrat", sans-serif !important; font-size: clamp(18px, 1vw + 12px, 24px) !important; justify-content: center; gap: .5em; }
+.closing .btn--primary svg { display: none; }
+.closing .btn--primary::after { content: "»"; }
+footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px !important; }

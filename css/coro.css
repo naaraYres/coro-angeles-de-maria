@@ -21,28 +21,6 @@
 .nav__logo img { height: 34px; width: auto; }
 @media (max-width: 639px) { .nav__logo img { height: 28px; } }
 
-/* el logo completo (óvalo) arriba del título */
-.hero__logo {
-  display: block;
-  width: min(300px, 70vw);
-  height: auto;
-  margin: 0 0 var(--s-6) -6px;
-}
-@media (max-width: 639px) { .hero__logo { width: min(240px, 66vw); margin-bottom: var(--s-4); } }
-
-/* computadora: el logo grande a la derecha del título, para que el hero no quede vacío */
-@media (min-width: 1024px) {
-  .hero--statement .hero-text > div:first-child {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(320px, 440px);
-    column-gap: var(--s-9, 72px);
-    align-items: center;
-    margin-block: auto;
-  }
-  .hero--statement .hero-text > div:first-child > :not(.hero__logo) { grid-column: 1; }
-  .hero--statement .hero__logo { grid-column: 2; grid-row: 1 / span 3; width: 100%; margin: 0; }
-}
-
 /* etiquetas pequeñas (Trayectoria) en dorado */
 .statement .t-label { color: var(--oro-texto); }
 
@@ -58,12 +36,6 @@
 
 /* pie oscuro: títulos de columnas en dorado */
 .footer--dark .footer__col h3 { color: var(--oro-claro); }
-
-/* Hero: el español usa palabras más largas; el título necesita más ancho
-   para quedarse en 2 líneas en pantallas grandes */
-@media (min-width: 1024px) {
-  .hero--statement h1 { max-width: 26ch; }
-}
 
 /* Servicios: la línea bajo la lista */
 .servicios__nota {
@@ -210,3 +182,73 @@ main > section.legal-section { padding-top: var(--s-7); }
 .libro-cta .btn { margin-top: var(--s-4); }
 .libro-cta .btn[hidden], [data-libro-pendiente][hidden] { display: none; }
 @media (max-width: 639px) { .libro-cta { flex-direction: column; padding: var(--s-5); } }
+
+/* ----------------------------------------------------------
+   SECCIONES CON FOTOS (orden de la página de ejemplo)
+   --pos en el style de una foto mueve el encuadre.
+   ---------------------------------------------------------- */
+.foto { margin: 0; display: flex; flex-direction: column; min-width: 0; min-height: 0; }
+.foto img, .hacemos__foto img, .elija__card img {
+  display: block; width: 100%; max-width: none;
+  object-fit: cover; object-position: var(--pos, 50% 50%);
+  border-radius: var(--r-lg, 12px); background: var(--p-surface);
+}
+.foto img { height: auto; aspect-ratio: 4 / 3; }
+
+/* QUÉ HACEMOS: foto a la izquierda, título y 3 bloques a la derecha, la fila de datos abajo */
+.hacemos { align-items: stretch; row-gap: var(--s-6); }
+.hacemos__foto { margin: 0; overflow: hidden; border-radius: var(--r-lg, 12px); }
+.hacemos__foto img { height: 100%; aspect-ratio: 4 / 3; }
+.hacemos__texto { display: flex; flex-direction: column; gap: var(--s-5); align-items: flex-start; }
+.hacemos__texto h2 { font-size: var(--t-h2); }
+.bloques { display: grid; gap: var(--s-4); }
+.bloque { padding-left: var(--s-4); border-left: 2px solid var(--oro); }
+.bloque h3 { font: 500 var(--t-card)/1.3 var(--font-text); margin: 0 0 var(--s-1); }
+.bloque p { margin: 0; color: var(--muted); max-width: 46ch; }
+.hechos { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-5) var(--s-4); margin: var(--s-7) 0 0; padding-top: var(--s-5); border-top: 1px solid color-mix(in oklab, var(--oro) 50%, transparent); }
+.hechos dt { font: var(--display-weight) var(--t-stat)/1.1 var(--font-display); color: var(--p-accent); }
+.hechos dd { margin: var(--s-1) 0 0; font-size: var(--t-small); color: var(--muted); }
+
+/* ELIJA SU EVENTO: tres tarjetas con foto, título, línea y botón */
+.elija__card { display: flex; flex-direction: column; gap: var(--s-3); align-items: flex-start; }
+.elija__card img { aspect-ratio: 16 / 10; height: auto; margin-bottom: var(--s-2); }
+.elija__card h3 { margin: 0; }
+.elija__card p { margin: 0; color: var(--muted); }
+.elija__card .btn { margin-top: auto; }
+.elija { row-gap: var(--s-5); }
+
+/* EVENTOS: el texto a la izquierda, dos fotos verticales a la derecha */
+.eventos { align-items: center; row-gap: var(--s-6); }
+.eventos__texto { display: flex; flex-direction: column; gap: var(--s-5); align-items: flex-start; }
+.fotos { display: grid; gap: var(--s-4); min-height: 0; grid-template-columns: 1fr 1fr; }
+.fotos--eventos .foto img { aspect-ratio: 3 / 4; }
+
+/* DÓNDE NOS HAN VISTO: fila de nombres y fotos */
+.marcas { list-style: none; margin: 0 0 var(--s-5); padding: 0; display: flex; flex-wrap: wrap; gap: var(--s-2) var(--s-4);
+  font: var(--display-weight) clamp(18px, 1.4vw + 10px, 26px)/1.3 var(--font-display); color: var(--muted); }
+.marcas li { display: flex; align-items: center; gap: var(--s-4); }
+.marcas li + li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--oro); }
+.foto--mitad { grid-column: 1 / -1; }
+.foto--mitad img { aspect-ratio: 16 / 9; }
+
+@media (min-width: 640px) {
+  .hechos { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1024px) {
+  .hacemos__foto img { aspect-ratio: auto; min-height: 420px; }
+  .elija__card img { aspect-ratio: 16 / 11; }
+  .fotos--eventos .foto img { aspect-ratio: auto; height: min(640px, 66svh); }
+
+  .fotos--prensa { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: minmax(0, 1.25fr) minmax(0, 1fr); min-height: 380px; }
+  .fotos--prensa .foto img { flex: 1 1 0; min-height: 0; height: 100%; aspect-ratio: auto; }
+  .fotos--prensa .foto--mitad { grid-column: span 6; }
+  .fotos--prensa .foto:nth-child(3) { grid-column: span 5; }
+  .fotos--prensa .foto:nth-child(4) { grid-column: span 4; }
+  .fotos--prensa .foto--chica { grid-column: span 3; }
+}
+
+/* 320px: el botón grande del cierre puede partir su texto */
+@media (max-width: 380px) {
+  .closing__cta .btn--xl { white-space: normal; text-align: center; }
+}

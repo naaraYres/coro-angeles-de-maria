@@ -11,7 +11,7 @@
 <meta property="og:image" content="share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#f9edde">
+<meta name="theme-color" content="#ffffff">
 <!-- <link rel="canonical" href="https://[dominio del coro]/"> cuando exista el dominio -->
 <meta name="site-kind" content="other">
 <meta name="page-type" content="service">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
 <link rel="stylesheet" href="assets/layout/layout.css">
 <link rel="stylesheet" href="assets/icons/icon.css">
-<link rel="stylesheet" href="assets/moments/word-highlight/moment.css">
+<link rel="stylesheet" href="assets/moments/picture-develops/moment.css">
 <!-- colores del manual de marca: marfil #f9edde, terracota #8f422c, dorado suave #c68c5c, vino oscuro #64190b; tinta casi negra del logo -->
 <style>
 :root {
@@ -42,29 +42,32 @@
 </style>
 <!-- estilos propios de esta web (lo que el kit no trae) -->
 <link rel="stylesheet" href="css/coro.css">
+<!-- estilo de la página de ejemplo (aprendamosmarketing.com) con los colores de la marca -->
+<link rel="stylesheet" href="css/ejemplo.css">
 
 <script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
 <script src="assets/backgrounds/backgrounds.js"></script>
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 <link rel="modulepreload" href="assets/moments/moments.js">
 <link rel="modulepreload" href="assets/moments/lib.js">
-<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<link rel="modulepreload" href="assets/moments/picture-develops/moment.js">
 </head>
 <body>
 <!-- type: service
-     deal: hero statement (split y film necesitan foto o video: aún no hay), nav nav-mega sin panel (no hay foto para su tarjeta),
-     close close-type (close-photo vuelto a repartir: sin foto), footer footer-dark, rhythm space, buttons block, mark dots
+     deal: hero split (foto de los pétalos + tarjeta "Canal 4 y Saga Falabella"), nav nav-mega sin panel,
+     close close-type, footer footer-dark, rhythm space, buttons block, mark dots
      palette: manual de marca (marfil, terracota, dorado suave, vino oscuro); type EB Garamond + Montserrat
-     logo: img/logo-principal.svg (óvalo, clave de sol, ángel dorado); ángel solo en img/angel.svg
-     moments: word-highlight en #trayectoria -->
+     logo: img/logo-principal.svg (óvalo); ángel solo en img/angel.svg (barra y pie)
+     moments: picture-develops en la foto de #que-hacemos; word-highlight en #trayectoria -->
 
 <header class="nav">
   <div class="wrap nav__bar">
     <a class="skip-link" href="#top">Ir al contenido</a>
     <a class="nav__logo" href="#top"><img src="img/angel.svg" alt="" width="38" height="36">Ángeles de María</a>
     <nav class="nav__links" aria-label="Principal">
+      <div class="nav__item"><a class="nav__link" href="#que-hacemos">Qué hacemos</a></div>
       <div class="nav__item"><a class="nav__link" href="#servicios">Servicios</a></div>
-      <div class="nav__item"><a class="nav__link" href="#instrumentos">Instrumentos</a></div>
+      <div class="nav__item"><a class="nav__link" href="#eventos">Eventos</a></div>
       <div class="nav__item"><a class="nav__link" href="#trayectoria">Trayectoria</a></div>
       <div class="nav__item"><a class="nav__link" href="#preguntas">Preguntas</a></div>
     </nav>
@@ -78,65 +81,155 @@
 </header>
 
 <main id="top">
-  <!-- HERO -->
-  <section class="hero hero--statement" data-enter aria-labelledby="hero-h">
-    <div class="wrap"><div class="hero-text hero__in">
-      <div>
-        <img class="hero__logo" src="img/logo-principal.svg" alt="Ángeles de María, coros y eventos" width="875" height="650">
-        <h1 id="hero-h">Coro con músicos en vivo para eventos en Lima</h1>
-        <p class="hero__lead">Misa criolla, ceremonias y eventos de empresa todo el año; villancicos y encendidos de árbol en Navidad. Coro juvenil con órgano, cuerdas, vientos o cajón.</p>
-        <div class="btn-row">
-          <a class="btn btn--primary" href="#cotizar">Cotizar presentación<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
-          <a class="btn btn--secondary" href="#servicios">Ver servicios</a>
-        </div>
+  <!-- ==========================================================
+       DISEÑO TOMADO DE LA PÁGINA DE EJEMPLO (aprendamosmarketing.com):
+       fondo blanco, títulos gruesos con palabras en degradé, botones grandes
+       en degradé, franjas de color a todo lo ancho. Colores: los del manual
+       de marca (dorado, terracota, vino). Estilos en css/ejemplo.css.
+       ========================================================== -->
+
+  <!-- 1. PORTADA: texto a la izquierda, foto sobre una mancha de color con circulitos de datos -->
+  <section class="ej-hero" data-enter aria-labelledby="hero-h">
+    <div class="ej-wrap ej-hero__grid">
+      <div class="ej-hero__texto">
+        <p class="ej-pre">Coro y organización de eventos en Lima</p>
+        <h1 id="hero-h"><span class="ej-grad">Música en vivo</span> para que su evento se recuerde.</h1>
+        <p class="ej-lead">Somos un <b>coro juvenil con órgano, cuerdas, vientos o cajón</b>: misa criolla, ceremonias y eventos de empresa todo el año, y villancicos con encendido de árbol en Navidad.</p>
+        <a class="ej-btn ej-btn--xl" href="#cotizar">Cotizar mi evento <span aria-hidden="true">»</span></a>
+        <p class="ej-sub"><b>¿Prefiere conversar?</b> <a href="https://wa.me/51939942404">ESCRÍBANOS AQUÍ</a> por WhatsApp.</p>
       </div>
-      <dl class="hero__facts">
-        <div><dt>Se ha presentado en</dt><dd>Canal 4 y Saga Falabella</dd></div>
-        <div><dt>Ha cantado para</dt><dd>Ministerios y municipalidades</dd></div>
-        <div><dt>Agenda</dt><dd>Todo el año, y Navidad en diciembre</dd></div>
-        <div><dt>Cotización</dt><dd>Por WhatsApp</dd></div>
+      <div class="ej-hero__media">
+        <div class="ej-blob" aria-hidden="true"></div>
+        <img class="ej-hero__foto" src="img/fotos/cierre-petalos.jpg" alt="El coro celebra con los brazos en alto bajo una lluvia de pétalos rojos" width="842" height="842" fetchpriority="high">
+        <ul class="ej-badges">
+          <li><b>Canal 4</b><span>en TV</span></li>
+          <li><b>Saga</b><span>Falabella</span></li>
+          <li><b>Todo</b><span>el año</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. FRANJA DE COLOR CON DATOS (como los contadores del ejemplo).
+       Cuando el coro pase sus números, cambiar por: +X años · +X eventos · X chicos. -->
+  <section class="ej-banda" aria-labelledby="banda-h">
+    <div class="ej-wrap">
+      <h2 id="banda-h">¡Llevamos música en vivo a misas, empresas y centros comerciales de Lima!</h2>
+      <p class="ej-banda__lead"><b>Coro juvenil con músicos en vivo,</b> para el momento más importante de su evento.</p>
+      <dl class="ej-datos">
+        <div><dt>Canal 4</dt><dd>Nos hemos presentado en televisión.</dd></div>
+        <div><dt>Saga Falabella</dt><dd>Encendidos de árbol en Navidad.</dd></div>
+        <div><dt>Ministerios</dt><dd>Y municipalidades de Lima.</dd></div>
       </dl>
-    </div></div>
+    </div>
   </section>
 
-  <!-- SERVICIOS: lista de servicios (rows). Los precios se muestran cuando el coro los confirme. -->
-  <section class="section" id="servicios" aria-labelledby="servicios-h">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="servicios-h">Servicios del coro. <span class="muted">El precio depende de la fecha, el distrito y la formación.</span></h2>
+  <!-- 3. QUÉ HACEMOS: foto a la izquierda, título en dos colores y 3 puntos con ícono -->
+  <section class="ej-sec" id="que-hacemos" aria-labelledby="hacemos-h">
+    <div class="ej-wrap ej-split">
+      <figure class="ej-split__foto" data-moment="picture-develops"><img src="img/fotos/navidad-mall-aventura.jpg" alt="El coro vestido de ángeles canta junto al árbol de Navidad del Mall Aventura Plaza, con teclado y flauta en vivo" width="960" height="540"></figure>
+      <div class="ej-split__texto">
+        <h2 id="hacemos-h"><span class="ej-grad">Coro, músicos y evento</span><br>en un solo lugar.</h2>
+        <p><b>Sin improvisar:</b> armamos la música según su evento, su local y su fecha, y si lo necesita también organizamos todo lo demás.</p>
+        <ul class="ej-puntos">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/></svg><div><h3>Coro con músicos en vivo.</h3><p>Voces juveniles con órgano, cuerdas, vientos o cajón, según el evento.</p></div></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v6M9 5h6M5 22V12l7-4 7 4v10M9 22v-5h6v5"/></svg><div><h3>Misas y ceremonias.</h3><p>Misa criolla, matrimonios, bautizos y aniversarios, en la iglesia o en su local.</p></div></li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10h18M5 10v10M19 10v10M8 6h8l2 4H6z"/></svg><div><h3>Organización del evento.</h3><p>Mesas, mantelería y decoración, con el coro incluido.</p></div></li>
+        </ul>
+        <a class="ej-btn" href="#servicios">Ver los servicios <span aria-hidden="true">»</span></a>
       </div>
-      <ul class="rows servicios">
-        <li><span class="rows__name">Misa criolla</span><p>La misa cantada con cajón e instrumentos criollos, para parroquias, colegios y celebraciones peruanas.</p><span class="rows__value">Todo el año</span></li>
-        <li><span class="rows__name">Misas y ceremonias</span><p>Coro con órgano o con cuerdas para misas, matrimonios, bautizos y aniversarios.</p><span class="rows__value">Todo el año</span></li>
-        <li><span class="rows__name">Eventos de empresa</span><p>Recepciones, aniversarios, inauguraciones y fiestas de fin de año, con saxo, flauta o cuerdas.</p><span class="rows__value">Todo el año</span></li>
-        <li><span class="rows__name">Villancicos y encendido de árbol</span><p>Villancicos en vivo y una cuenta regresiva cantada para el momento en que se prende el árbol.</p><span class="rows__value">Noviembre y diciembre</span></li>
-        <li><span class="rows__name">Temporada en centro comercial</span><p>Varias fechas en el mismo local durante diciembre, con un precio por fecha más bajo.</p><span class="rows__value">Diciembre</span></li>
+    </div>
+  </section>
+
+  <!-- 4. FRANJA DE COLOR: ¿QUÉ EVENTO TIENE? (en el ejemplo aquí van los testimonios con tarjetas de borde blanco).
+       Los testimonios del coro van en esta misma franja cuando lleguen. Molde:
+       <figure class="ej-card"><blockquote>"..."</blockquote><figcaption><b>Nombre</b><span>Cargo, Empresa</span></figcaption></figure> -->
+  <section class="ej-banda ej-banda--cards" id="elija" aria-labelledby="elija-h">
+    <div class="ej-wrap">
+      <p class="ej-banda__pre">Cotizamos según su fecha, distrito y tipo de evento.</p>
+      <h2 id="elija-h">¿Qué evento tiene?</h2>
+      <div class="ej-cards">
+        <article class="ej-card">
+          <img src="img/fotos/villancicos-tienda.jpg" alt="El coro con gorros navideños canta villancicos dentro de una tienda" width="960" height="720">
+          <h3>Navidad en su empresa o centro comercial</h3>
+          <p>Villancicos, encendido de árbol y temporada de diciembre.</p>
+          <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Evento corporativo o fin de año">Cotizar Navidad</a>
+        </article>
+        <article class="ej-card">
+          <img src="img/fotos/misa-iglesia.jpg" alt="Niñas y niños del coro con túnicas blancas dentro de una iglesia" width="960" height="489">
+          <h3>Misa, matrimonio o ceremonia</h3>
+          <p>Coro con órgano, cuerdas o misa criolla con cajón.</p>
+          <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Misa o celebración religiosa">Cotizar ceremonia</a>
+        </article>
+        <article class="ej-card">
+          <img src="img/fotos/evento-jardin.jpg" alt="Recepción en un jardín bajo un toldo blanco con mesas decoradas y arreglos de flores" width="1080" height="1080" style="--pos: 50% 45%">
+          <h3>Su evento completo, organizado</h3>
+          <p>Mesas, mantelería, decoración y el coro, en un solo pedido.</p>
+          <a class="ej-btn ej-btn--claro" href="#cotizar" data-evento="Organización del evento completo">Cotizar evento</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. SERVICIOS E INSTRUMENTOS (blanco): la lista con su temporada y las formaciones -->
+  <section class="ej-sec" id="servicios" aria-labelledby="servicios-h">
+    <div class="ej-wrap">
+      <h2 id="servicios-h" class="ej-centro"><span class="ej-grad">Servicios del coro</span></h2>
+      <p class="ej-centro ej-sub2">El precio depende de la fecha, el distrito y la formación.</p>
+      <ul class="ej-servicios">
+        <li><h3>Misa criolla</h3><p>La misa cantada con cajón e instrumentos criollos, para parroquias, colegios y celebraciones peruanas.</p><span>Todo el año</span></li>
+        <li><h3>Misas y ceremonias</h3><p>Coro con órgano o con cuerdas para misas, matrimonios, bautizos y aniversarios.</p><span>Todo el año</span></li>
+        <li><h3>Eventos de empresa</h3><p>Recepciones, aniversarios, inauguraciones y fiestas de fin de año, con saxo, flauta o cuerdas.</p><span>Todo el año</span></li>
+        <li><h3>Villancicos y encendido de árbol</h3><p>Villancicos en vivo y una cuenta regresiva cantada para el momento en que se prende el árbol.</p><span>Noviembre y diciembre</span></li>
+        <li><h3>Temporada en centro comercial</h3><p>Varias fechas en el mismo local durante diciembre, con un precio por fecha más bajo.</p><span>Diciembre</span></li>
+        <li><h3>Organización de eventos</h3><p>Recepciones, cenas y celebraciones con mesas, mantelería y decoración, y el coro incluido.</p><span>Todo el año</span></li>
       </ul>
-      <p class="servicios__nota">Le enviamos el precio por WhatsApp o por correo. <a class="link" href="#cotizar">Cotizar presentación</a></p>
+      <h3 class="ej-centro ej-h3" id="instrumentos">Formaciones e instrumentos</h3>
+      <ul class="ej-pills">
+        <li><b>Coro con órgano</b> misas, matrimonios y villancicos clásicos</li>
+        <li><b>Coro con cuerdas</b> violín, viola y chelo</li>
+        <li><b>Coro con vientos</b> saxo y flauta para recepciones</li>
+        <li><b>Misa criolla</b> cajón e instrumentos criollos</li>
+      </ul>
     </div>
   </section>
 
-  <!-- INSTRUMENTOS: las formaciones con las que el coro sale a tocar -->
-  <section class="section" id="instrumentos" aria-labelledby="instrumentos-h">
-    <div class="wrap">
-      <div class="section-head">
-        <h2 id="instrumentos-h">Formaciones e instrumentos. <span class="muted">El coro canta con músicos en vivo.</span></h2>
+  <!-- 6. TAMBIÉN ORGANIZAMOS SU EVENTO (como la sección del fundador del ejemplo: foto a un lado, lista con íconos al otro).
+       Cuando llegue la foto y el nombre de la directora, puede ir una sección igual a esta para ella. -->
+  <section class="ej-sec ej-sec--suave" id="eventos" aria-labelledby="eventos-h">
+    <div class="ej-wrap ej-split ej-split--inv">
+      <div class="ej-split__texto">
+        <h2 id="eventos-h">También organizamos <span class="ej-grad">su evento completo.</span></h2>
+        <ul class="ej-lista">
+          <li>🎶 <b>El coro en vivo</b> para la entrada, el brindis o la misa.</li>
+          <li>🍽️ <b>Mesas y mantelería</b> para recepciones y cenas.</li>
+          <li>💐 <b>Decoración</b> a su gusto, en salón, terraza o jardín.</li>
+          <li>📋 <b>Un solo pedido</b> y una sola cotización para todo.</li>
+        </ul>
+        <a class="ej-btn" href="#cotizar" data-evento="Organización del evento completo">Cotizar mi evento <span aria-hidden="true">»</span></a>
       </div>
-      <div class="grid formaciones">
-        <article class="card span-6"><h3>Coro con órgano</h3><p>Para misas, matrimonios y villancicos clásicos en iglesias y salones.</p></article>
-        <article class="card span-6"><h3>Coro con cuerdas</h3><p>Violín, viola y chelo acompañando al coro en eventos y ceremonias.</p></article>
-        <article class="card span-6"><h3>Coro con vientos</h3><p>Saxo y flauta para recepciones, brindis y fiestas de fin de año.</p></article>
-        <article class="card span-6"><h3>Misa criolla</h3><p>Con cajón e instrumentos criollos, para misas y celebraciones peruanas.</p></article>
+      <div class="ej-duo">
+        <img src="img/fotos/evento-terraza.jpg" alt="Mesas largas con mantel gris, caminos turquesa y copas, en una terraza de noche" width="914" height="1280" style="--pos: 50% 65%">
+        <img src="img/fotos/evento-salon.jpg" alt="Salón con mesas redondas, manteles blancos y sillas forradas en satén" width="720" height="1280" style="--pos: 50% 45%">
       </div>
     </div>
   </section>
 
-  <!-- TRAYECTORIA: momento word-highlight (una frase que se pinta palabra por palabra al pasar).
-       Cuando llegue la lista de trayectoria, va en una sección propia debajo de esta. -->
-  <section class="section statement" id="trayectoria" data-moment="word-highlight" aria-label="Trayectoria">
-    <div class="wrap">
-      <p class="t-label">Trayectoria</p>
-      <p class="mo-wh__text">Hemos cantado en Canal 4, en ministerios, en municipalidades y en los encendidos de árbol de <strong>Saga Falabella</strong>. Hoy el coro es juvenil: lo forman los nietos de la directora y chicos que ya cantan en eventos.</p>
+  <!-- 7. DÓNDE NOS HAN VISTO (como la franja gris de logos del ejemplo) + fotos. Teletón va chica a propósito. -->
+  <section class="ej-sec ej-sec--gris" id="trayectoria" aria-labelledby="prensa-h">
+    <div class="ej-wrap">
+      <h2 id="prensa-h" class="ej-titulo-caps ej-centro"><span class="ej-grad">¡Algunos lugares donde ya nos han visto!</span></h2>
+      <ul class="ej-marcas" aria-label="Lugares y medios">
+        <li>Canal 4</li><li>Saga Falabella</li><li>Scotiabank</li><li>Mall Aventura</li><li>Teletón</li>
+      </ul>
+      <div class="ej-galeria">
+        <img class="g1" src="img/fotos/tv-america-la-previa.jpg" alt="Un reportero de América TV entrevista a una niña del coro por el día de Santa Rosa de Lima" width="960" height="540" loading="lazy">
+        <img class="g2" src="img/fotos/procesion.jpg" alt="El coro canta desde un estrado morado frente a una multitud en una procesión" width="960" height="540" loading="lazy">
+        <img class="g3" src="img/fotos/empresa-scotiabank.jpg" alt="El coro canta en una agencia de Scotiabank decorada por Navidad" width="960" height="890" loading="lazy" style="--pos: 50% 88%">
+        <img class="g4" src="img/fotos/tv-set-navidad.jpg" alt="El coro con gorros navideños posa con los conductores en un set de televisión" width="960" height="720" loading="lazy">
+        <img class="g5" src="img/fotos/teleton.jpg" alt="Niños del coro con gorros navideños cantando en la Teletón" width="1080" height="720" loading="lazy">
+      </div>
+      <p class="ej-frase">Hemos cantado en Canal 4, en ministerios, en municipalidades y en los encendidos de árbol de <b>Saga Falabella</b>. Hoy el coro es juvenil: lo forman los nietos de la directora y chicos que ya cantan en eventos.</p>
     </div>
   </section>
 
@@ -174,6 +267,7 @@
               <option>Misa criolla</option>
               <option>Misa o celebración religiosa</option>
               <option>Matrimonio</option>
+              <option>Organización del evento completo</option>
               <option>Otro</option>
             </select>
             <p class="field__error" id="f-evento-err" hidden>Elija el tipo de evento.</p></div>
@@ -209,7 +303,7 @@
   </section>
 
   <!-- PREGUNTAS: todas abiertas -->
-  <section class="section" id="preguntas" aria-labelledby="preguntas-h">
+  <section class="section" id="preguntas" style="--hm: 2" aria-labelledby="preguntas-h">
     <div class="wrap">
       <div class="grid grid--top">
       <div class="section-head span-5">
@@ -241,9 +335,9 @@
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><img src="img/angel-claro.svg" alt="" width="38" height="36">Ángeles de María</a>
-          <p class="footer__lede">Coro juvenil con músicos en vivo para misas, ceremonias, empresas, centros comerciales y municipalidades en Lima.</p>
+          <p class="footer__lede">Coro juvenil con músicos en vivo y organización de eventos en Lima: misas, ceremonias, empresas, centros comerciales y municipalidades.</p>
         </div>
-        <div class="span-2 start-5 footer__col"><h3>El coro</h3><ul><li><a href="#servicios">Servicios</a></li><li><a href="#instrumentos">Instrumentos</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
+        <div class="span-2 start-5 footer__col"><h3>El coro</h3><ul><li><a href="#servicios">Servicios</a></li><li><a href="#instrumentos">Instrumentos</a></li><li><a href="#eventos">Eventos</a></li><li><a href="#trayectoria">Trayectoria</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Contratar</h3><ul><li><a href="#cotizar">Cotizar</a></li><li><a href="#preguntas">Preguntas</a></li></ul></div>
         <div class="span-2 footer__col"><h3>WhatsApp</h3><ul><li><a href="https://wa.me/51939942404">+51 939 942 404</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Legal</h3><ul><li><a href="privacidad.html">Política de privacidad</a></li><li><a href="terminos.html">Términos y condiciones</a></li><li><a href="cookies.html">Cookies</a></li></ul></div>
