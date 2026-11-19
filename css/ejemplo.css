@@ -267,3 +267,8 @@ footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px
 #cotizar a.btn--secondary::after { display: none; }
 #cotizar a.btn--secondary:hover { transform: translate3d(0, -2px, 0); }
 #cotizar a.btn--secondary:active { transform: scale(.98); }
+
+/* sobre el fondo vino del cierre, el degradé termina en terracota (si termina en vino se pierde en el fondo) */
+.closing .btn--primary { background: linear-gradient(90deg, #c68c5c 0%, #a65a33 55%, #8f422c 100%) !important; }
+/* las casillas no se encogen cuando el texto ocupa dos líneas */
+.check input { flex: none; }
