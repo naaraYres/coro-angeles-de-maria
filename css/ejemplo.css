@@ -255,3 +255,15 @@ footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px
   .ej-btn, .ej-btn::after, .ej-card, .ej-card::after, .ej-servicios li, .ej-servicios li::after, .ej-zoom img { transition: none !important; }
   .ej-btn:hover, .ej-btn:active, .ej-card:hover, .ej-servicios li:hover, .ej-zoom:hover img, .ej-card:hover .ej-zoom img { transform: none !important; }
 }
+
+/* formulario: el botón de WhatsApp al lado del de correo, con borde (no como enlace) */
+#cotizar .btn-row { align-items: center; gap: 12px; }
+#cotizar a.btn--secondary {
+  display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px;
+  border: 1.5px solid var(--ej-terracota); border-radius: 8px; background: #fff; color: var(--ej-terracota);
+  font-weight: 700; text-transform: uppercase; letter-spacing: .02em; text-decoration: none;
+  transition: transform .35s var(--ej-curva);
+}
+#cotizar a.btn--secondary::after { display: none; }
+#cotizar a.btn--secondary:hover { transform: translate3d(0, -2px, 0); }
+#cotizar a.btn--secondary:active { transform: scale(.98); }
