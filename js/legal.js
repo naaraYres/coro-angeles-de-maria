@@ -9,6 +9,9 @@
     const v = c[el.dataset.negocio];
     if (v) el.textContent = v;
   });
+  document.querySelectorAll('[data-si-hay]').forEach(el => {
+    if (!c[el.dataset.siHay]) el.hidden = true;
+  });
   const url = c.libroReclamaciones;
   const boton = document.querySelector('[data-libro-url]');
   const pendiente = document.querySelector('[data-libro-pendiente]');

@@ -15,8 +15,8 @@ window.CORO = {
 
   // DATOS LEGALES (aparecen en el pie, la política de privacidad, los
   // términos y el Libro de Reclamaciones). Completar con los datos reales.
-  razonSocial: "",      // nombre en SUNAT (persona o empresa), ej. "María ... " o "Ángeles de María E.I.R.L."
-  ruc: "",              // 11 dígitos
+  razonSocial: "Ángeles de María",   // titular que aparece en privacidad, términos y Libro de Reclamaciones
+  ruc: "",              // opcional: si se pone, aparece en el Libro de Reclamaciones
   direccion: "",        // domicilio fiscal
   actualizacion: "12 de noviembre de 2026",
 
