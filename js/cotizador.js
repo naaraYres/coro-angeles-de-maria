@@ -28,13 +28,21 @@ function valor(nombre) {
   return campo.value.trim();
 }
 
+// "2026-12-05" -> "sábado 5 de diciembre de 2026" (la fecha del formulario, más fácil de leer en WhatsApp)
+function fechaLegible(v) {
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v);
+  if (!m) return v;
+  const d = new Date(+m[1], +m[2] - 1, +m[3]);
+  return d.toLocaleDateString('es-PE', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+}
+
 function armarMensaje() {
   const lineas = [
     config.saludo || 'Hola, quiero cotizar una presentación.',
     '',
     `Nombre o empresa: ${valor('nombre')}`,
     `Tipo de evento: ${valor('evento')}`,
-    `Fecha: ${valor('fecha')}`,
+    `Fecha: ${fechaLegible(valor('fecha'))}`,
     `Distrito: ${valor('distrito')}`
   ];
   const opcionales = [
@@ -43,6 +51,7 @@ function armarMensaje() {
     ['Detalles', valor('detalles')]
   ];
   opcionales.forEach(([etiqueta, texto]) => { if (texto) lineas.push(`${etiqueta}: ${texto}`); });
+  if (config.despedida) lineas.push('', config.despedida);
   return lineas.join('\n');
 }
 
