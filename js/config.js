@@ -25,6 +25,9 @@ window.CORO = {
   // Mientras esté vacío, la página explica cómo reclamar por correo.
   libroReclamaciones: "",
 
-  // Saludo con el que empieza el mensaje de cotización.
-  saludo: "Buenos días, quisiera una cotización de música en vivo para nuestro evento."
+  // Saludo con el que empieza el mensaje de cotización (botón "Cotizar por WhatsApp").
+  saludo: "¡Hola, Coro Ángeles de María! 👋 Vi su página web y quisiera cotizar una presentación del coro. Estos son los datos de mi evento:",
+
+  // Cierre del mensaje de cotización.
+  despedida: "¿Me podrían enviar el precio y confirmar si tienen la fecha disponible? ¡Gracias!"
 };
