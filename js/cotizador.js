@@ -51,7 +51,7 @@ if (form) {
 
   // 1) Antes que system.js: elegir el camino según el botón
   form.addEventListener('submit', evento => {
-    const via = evento.submitter?.dataset.enviar || 'whatsapp';
+    const via = evento.submitter?.dataset.enviar || 'correo'; // el formulario ahora solo envía por correo
     form.dataset.via = via;
     if (via === 'correo' && config.correo) {
       form.dataset.endpoint = `https://formsubmit.co/ajax/${config.correo}`;
