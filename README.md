@@ -42,4 +42,5 @@ coro-angeles-de-maria/
 
 ## Cambiar el número de WhatsApp
 
-Editar `js/config.js` (campo `whatsapp`) y los dos enlaces `wa.me/...` en `index.html` (formulario y pie de página).
+Editar `js/config.js` (campo `whatsapp`): lo usa el formulario, que manda los datos del evento.
+Los botones directos de WhatsApp (portada y pie de todas las páginas) usan el enlace corto `https://w.app/qnb0lm`, que abre el chat con un saludo ya escrito. Si cambia el número, actualizar ese enlace en w.app o reemplazarlo en los `.html`.
