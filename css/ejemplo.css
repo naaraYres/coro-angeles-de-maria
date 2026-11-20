@@ -48,7 +48,7 @@ main h1, main h2, main h3, .closing h2 {
   display: inline-flex; align-items: center; justify-content: center; gap: .5em;
   min-height: 52px; padding: 14px 32px; border-radius: 8px;
   background: var(--ej-grad-btn); color: #fff; box-shadow: var(--ej-sombra);
-  font: 700 17px/1.2 "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: .02em;
+  font: 700 17px/1.2 "Montserrat", sans-serif;
   text-decoration: none;
 }
 .ej-btn--xl { font-size: clamp(18px, 1.2vw + 10px, 24px); padding: 24px 44px; min-height: 76px; width: 100%; max-width: 600px; }
@@ -163,7 +163,7 @@ main h1, main h2, main h3, .closing h2 {
 #cotizar { background: var(--ej-suave); }
 #cotizar h2, #preguntas h2 { font-size: clamp(30px, 1.8vw + 18px, 44px); font-weight: 700; }
 #cotizar .btn--primary, .closing .btn--primary {
-  background: var(--ej-grad-btn); border: 0; box-shadow: var(--ej-sombra); text-transform: uppercase; font-weight: 700; letter-spacing: .02em;
+  background: var(--ej-grad-btn); border: 0; box-shadow: var(--ej-sombra); font-weight: 700;
 }
 .footer--dark { background: var(--ej-vino) !important; }
 .closing { padding-block: 96px 40px !important; }
@@ -261,7 +261,7 @@ footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px
 #cotizar a.btn--secondary {
   display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 24px;
   border: 1.5px solid var(--ej-terracota); border-radius: 8px; background: #fff; color: var(--ej-terracota);
-  font-weight: 700; text-transform: uppercase; letter-spacing: .02em; text-decoration: none;
+  font-weight: 700; text-decoration: none;
   transition: transform .35s var(--ej-curva);
 }
 #cotizar a.btn--secondary::after { display: none; }
@@ -272,3 +272,6 @@ footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px
 .closing .btn--primary { background: linear-gradient(90deg, #c68c5c 0%, #a65a33 55%, #8f422c 100%) !important; }
 /* las casillas no se encogen cuando el texto ocupa dos líneas */
 .check input { flex: none; }
+
+/* el texto del pie en la misma letra que el resto (la serif queda solo para el logo y los nombres de Trayectoria) */
+.closing__links .footer__lede { font-family: "Montserrat", system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
