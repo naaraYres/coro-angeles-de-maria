@@ -5,3 +5,8 @@ node_modules/
 marca/fuente/fonts/
 __pycache__/
 .taste-skill/consistency/
+
+# herramientas de diseño: se quedan solo en la computadora, no en GitHub
+.claude/
+.taste-skill/
+skills-lock.json
