@@ -26,5 +26,5 @@ window.CORO = {
   libroReclamaciones: "",
 
   // Saludo con el que empieza el mensaje de cotización.
-  saludo: "Buenos días, quisiera una cotización de música en vivo para nuestro evento."
+  saludo: "Buenos días, quisiera una cotización del coro para nuestro evento."
 };
