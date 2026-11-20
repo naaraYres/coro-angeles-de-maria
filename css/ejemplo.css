@@ -275,3 +275,8 @@ footer.closing > .wrap { grid-template-rows: auto auto !important; row-gap: 64px
 
 /* el texto del pie en la misma letra que el resto (la serif queda solo para el logo y los nombres de Trayectoria) */
 .closing__links .footer__lede { font-family: "Montserrat", system-ui, sans-serif; font-size: 16px; line-height: 1.6; }
+
+/* Trayectoria: los nombres en dos grupos (instituciones; empresas y medios) */
+.ej-marcas__grupo { text-align: center; margin: 32px 0 12px; font-size: 14px; font-weight: 600; color: var(--ej-terracota); letter-spacing: .04em; }
+.ej-marcas__grupo + .ej-marcas { margin-top: 0; margin-bottom: 8px; font-size: clamp(17px, .6vw + 12px, 21px); gap: 10px 32px; max-width: 1040px; margin-inline: auto; }
+.ej-marcas__grupo + .ej-marcas + .ej-marcas__grupo + .ej-marcas { margin-bottom: 48px; }
